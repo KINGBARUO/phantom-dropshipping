@@ -3,12 +3,811 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Phantom Store — discover premium products at exceptional prices."
+    >
+
     <title>Phantom Store</title>
+
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-    <h1>Phantom Store</h1>
+    <!-- ================================
+         PAGE LOADER
+    ================================= -->
+
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-helix">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="loader-brand">PHANTOM</div>
+        <div class="loader-text">INITIALIZING STORE</div>
+    </div>
+
+
+    <!-- ================================
+         SIDEBAR OVERLAY
+    ================================= -->
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+
+    <!-- ================================
+         SIDEBAR
+    ================================= -->
+
+    <aside class="sidebar" id="sidebar">
+
+        <div class="sidebar-header">
+            <div class="brand">
+                <span class="brand-mark">P</span>
+                <span>PHANTOM</span>
+            </div>
+
+            <button
+                class="close-sidebar"
+                id="closeSidebar"
+                aria-label="Close menu"
+            >
+                ×
+            </button>
+        </div>
+
+        <div class="sidebar-content">
+
+            <p class="menu-label">MENU</p>
+
+            <nav class="sidebar-nav">
+
+                <a href="#home" class="sidebar-link active">
+                    <span>⌂</span>
+                    <span>Home</span>
+                </a>
+
+                <a href="#shop" class="sidebar-link">
+                    <span>◈</span>
+                    <span>Shop</span>
+                </a>
+
+                <a href="#trending" class="sidebar-link">
+                    <span>✦</span>
+                    <span>Trending</span>
+                </a>
+
+                <a href="#categories" class="sidebar-link">
+                    <span>◇</span>
+                    <span>Categories</span>
+                </a>
+
+                <a href="#deals" class="sidebar-link">
+                    <span>⚡</span>
+                    <span>Deals</span>
+                </a>
+
+                <a href="#wishlist" class="sidebar-link">
+                    <span>♡</span>
+                    <span>Wishlist</span>
+                </a>
+
+            </nav>
+
+
+            <p class="menu-label account-label">ACCOUNT</p>
+
+            <nav class="sidebar-nav">
+
+                <a href="#" class="sidebar-link">
+                    <span>◎</span>
+                    <span>My Account</span>
+                </a>
+
+                <a href="#" class="sidebar-link">
+                    <span>▣</span>
+                    <span>My Orders</span>
+                </a>
+
+            </nav>
+
+        </div>
+
+        <div class="sidebar-footer">
+            <p>PHANTOM STORE</p>
+            <span>Discover. Shop. Repeat.</span>
+        </div>
+
+    </aside>
+
+
+    <!-- ================================
+         HEADER
+    ================================= -->
+
+    <header class="site-header">
+
+        <div class="header-left">
+
+            <button
+                class="menu-button"
+                id="openSidebar"
+                aria-label="Open menu"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <a href="#home" class="logo">
+                <span class="logo-symbol">P</span>
+
+                <span class="logo-text">
+                    PHANTOM
+                    <small>STORE</small>
+                </span>
+            </a>
+
+        </div>
+
+
+        <nav class="desktop-nav">
+
+            <a href="#home" class="nav-link active">Home</a>
+            <a href="#shop" class="nav-link">Shop</a>
+            <a href="#trending" class="nav-link">Trending</a>
+            <a href="#deals" class="nav-link">Deals</a>
+
+        </nav>
+
+
+        <div class="header-actions">
+
+            <button
+                class="header-icon"
+                id="searchButton"
+                aria-label="Search"
+            >
+                ⌕
+            </button>
+
+            <button
+                class="header-icon"
+                id="wishlistButton"
+                aria-label="Wishlist"
+            >
+                ♡
+            </button>
+
+            <button
+                class="header-icon cart-button"
+                id="cartButton"
+                aria-label="Shopping cart"
+            >
+                🛒
+                <span class="cart-count" id="cartCount">0</span>
+            </button>
+
+            <button class="account-button" id="accountButton">
+                ACCOUNT
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================================
+         MAIN CONTENT
+    ================================= -->
+
+    <main id="home">
+
+
+        <!-- ================================
+             HERO
+        ================================= -->
+
+        <section class="hero">
+
+            <div class="hero-glow hero-glow-one"></div>
+            <div class="hero-glow hero-glow-two"></div>
+
+            <div class="hero-content">
+
+                <div class="hero-tag">
+                    <span></span>
+                    THE NEXT SHOPPING EXPERIENCE
+                </div>
+
+                <h1>
+                    DISCOVER
+                    <span>WHAT'S NEXT.</span>
+                </h1>
+
+                <p>
+                    Curated products. Unexpected finds.
+                    A smarter way to discover what you actually want.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#shop" class="primary-button">
+                        SHOP NOW
+                        <span>→</span>
+                    </a>
+
+                    <a href="#trending" class="secondary-button">
+                        EXPLORE
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- HELIX -->
+
+            <div class="hero-helix" aria-hidden="true">
+
+                <div class="helix-line helix-left"></div>
+                <div class="helix-line helix-right"></div>
+
+                <span class="helix-node node-1"></span>
+                <span class="helix-node node-2"></span>
+                <span class="helix-node node-3"></span>
+                <span class="helix-node node-4"></span>
+                <span class="helix-node node-5"></span>
+                <span class="helix-node node-6"></span>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================================
+             DISCOVERY BAR
+        ================================= -->
+
+        <section class="discovery-section">
+
+            <div class="section-heading">
+
+                <div>
+                    <span class="eyebrow">DISCOVER</span>
+
+                    <h2>
+                        Find your next
+                        <span>favourite.</span>
+                    </h2>
+                </div>
+
+                <p>
+                    Explore products selected for people
+                    who don't want ordinary.
+                </p>
+
+            </div>
+
+
+            <div class="category-grid" id="categories">
+
+                <button class="category-card category-tech">
+                    <span class="category-icon">◈</span>
+                    <strong>TECH</strong>
+                    <small>Smart essentials</small>
+                </button>
+
+                <button class="category-card category-fashion">
+                    <span class="category-icon">◇</span>
+                    <strong>FASHION</strong>
+                    <small>Define your style</small>
+                </button>
+
+                <button class="category-card category-home">
+                    <span class="category-icon">⌂</span>
+                    <strong>HOME</strong>
+                    <small>Upgrade your space</small>
+                </button>
+
+                <button class="category-card category-fitness">
+                    <span class="category-icon">✦</span>
+                    <strong>FITNESS</strong>
+                    <small>Move better</small>
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================================
+             TRENDING PRODUCTS
+        ================================= -->
+
+        <section class="products-section" id="trending">
+
+            <div class="section-heading product-heading">
+
+                <div>
+                    <span class="eyebrow">TRENDING NOW</span>
+
+                    <h2>
+                        Products worth
+                        <span>knowing.</span>
+                    </h2>
+                </div>
+
+                <a href="#shop" class="view-all">
+                    VIEW ALL →
+                </a>
+
+            </div>
+
+
+            <div class="product-grid" id="productGrid">
+
+                <!-- PRODUCT 1 -->
+
+                <article
+                    class="product-card"
+                    data-product="headphones"
+                    data-color="#4e8cff"
+                >
+
+                    <div class="product-image product-blue">
+
+                        <span class="product-badge">TRENDING</span>
+
+                        <button
+                            class="heart-button"
+                            aria-label="Add to wishlist"
+                        >
+                            ♡
+                        </button>
+
+                        <div class="product-placeholder">
+                            HEADPHONES
+                        </div>
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <span class="product-category">
+                            AUDIO
+                        </span>
+
+                        <h3>
+                            Phantom Wireless Pro
+                        </h3>
+
+                        <div class="product-bottom">
+
+                            <strong>₦45,000</strong>
+
+                            <button class="add-button">
+                                +
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUCT 2 -->
+
+                <article
+                    class="product-card"
+                    data-product="watch"
+                    data-color="#d6a84f"
+                >
+
+                    <div class="product-image product-gold">
+
+                        <span class="product-badge premium">
+                            PREMIUM
+                        </span>
+
+                        <button
+                            class="heart-button"
+                            aria-label="Add to wishlist"
+                        >
+                            ♡
+                        </button>
+
+                        <div class="product-placeholder">
+                            WATCH
+                        </div>
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <span class="product-category">
+                            ACCESSORIES
+                        </span>
+
+                        <h3>
+                            Aurex Smart Watch
+                        </h3>
+
+                        <div class="product-bottom">
+
+                            <strong>₦68,500</strong>
+
+                            <button class="add-button">
+                                +
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUCT 3 -->
+
+                <article
+                    class="product-card"
+                    data-product="speaker"
+                    data-color="#35d39a"
+                >
+
+                    <div class="product-image product-green">
+
+                        <span class="product-badge">
+                            NEW
+                        </span>
+
+                        <button
+                            class="heart-button"
+                            aria-label="Add to wishlist"
+                        >
+                            ♡
+                        </button>
+
+                        <div class="product-placeholder">
+                            SPEAKER
+                        </div>
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <span class="product-category">
+                            TECH
+                        </span>
+
+                        <h3>
+                            Echo Mini Speaker
+                        </h3>
+
+                        <div class="product-bottom">
+
+                            <strong>₦32,000</strong>
+
+                            <button class="add-button">
+                                +
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUCT 4 -->
+
+                <article
+                    class="product-card"
+                    data-product="sneakers"
+                    data-color="#a76cff"
+                >
+
+                    <div class="product-image product-purple">
+
+                        <span class="product-badge">
+                            HOT
+                        </span>
+
+                        <button
+                            class="heart-button"
+                            aria-label="Add to wishlist"
+                        >
+                            ♡
+                        </button>
+
+                        <div class="product-placeholder">
+                            SNEAKERS
+                        </div>
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <span class="product-category">
+                            FASHION
+                        </span>
+
+                        <h3>
+                            Phantom Street Runner
+                        </h3>
+
+                        <div class="product-bottom">
+
+                            <strong>₦57,000</strong>
+
+                            <button class="add-button">
+                                +
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================================
+             DEAL BANNER
+        ================================= -->
+
+        <section class="deal-section" id="deals">
+
+            <div class="deal-content">
+
+                <span class="eyebrow">
+                    LIMITED DROP
+                </span>
+
+                <h2>
+                    Your next upgrade
+                    <span>is waiting.</span>
+                </h2>
+
+                <p>
+                    Discover selected products with
+                    limited-time pricing.
+                </p>
+
+                <a href="#shop" class="primary-button">
+                    EXPLORE DEALS
+                    <span>→</span>
+                </a>
+
+            </div>
+
+            <div class="deal-orbit">
+                <div class="orbit-ring ring-one"></div>
+                <div class="orbit-ring ring-two"></div>
+                <div class="orbit-core">P</div>
+            </div>
+
+        </section>
+
+
+        <!-- ================================
+             SHOP
+        ================================= -->
+
+        <section class="products-section shop-section" id="shop">
+
+            <div class="section-heading">
+
+                <div>
+                    <span class="eyebrow">
+                        THE COLLECTION
+                    </span>
+
+                    <h2>
+                        Shop the
+                        <span>drop.</span>
+                    </h2>
+                </div>
+
+            </div>
+
+            <div class="shop-placeholder">
+
+                <div class="shop-placeholder-icon">
+                    ◈
+                </div>
+
+                <h3>
+                    More products are coming.
+                </h3>
+
+                <p>
+                    Our full product catalogue will
+                    appear here in the next phase.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================================
+         PRODUCT POPOVER
+    ================================= -->
+
+    <div class="product-modal" id="productModal">
+
+        <div class="modal-backdrop" id="modalBackdrop"></div>
+
+        <div class="product-modal-card">
+
+            <button
+                class="modal-close"
+                id="modalClose"
+                aria-label="Close product"
+            >
+                ×
+            </button>
+
+            <div
+                class="modal-product-image"
+                id="modalProductImage"
+            >
+                PRODUCT
+            </div>
+
+            <div class="modal-product-details">
+
+                <span class="product-category" id="modalCategory">
+                    PRODUCT
+                </span>
+
+                <h2 id="modalTitle">
+                    Product
+                </h2>
+
+                <div class="modal-rating">
+                    ★★★★★
+                    <span>(24 reviews)</span>
+                </div>
+
+                <p id="modalDescription">
+                    A premium product selected for the
+                    Phantom Store collection.
+                </p>
+
+                <div class="modal-price" id="modalPrice">
+                    ₦0
+                </div>
+
+                <div class="modal-actions">
+
+                    <button class="secondary-button">
+                        ♡ WISHLIST
+                    </button>
+
+                    <button
+                        class="primary-button modal-add-cart"
+                        id="modalAddCart"
+                    >
+                        ADD TO CART
+                        <span>→</span>
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================================
+         MINI CART
+    ================================= -->
+
+    <aside class="mini-cart" id="miniCart">
+
+        <div class="mini-cart-header">
+
+            <div>
+                <span class="eyebrow">YOUR BAG</span>
+                <h3>Shopping Cart</h3>
+            </div>
+
+            <button id="closeCart" class="close-cart">
+                ×
+            </button>
+
+        </div>
+
+        <div class="cart-items" id="cartItems">
+
+            <div class="empty-cart">
+                <div>🛒</div>
+                <p>Your cart is empty.</p>
+                <span>Add something you love.</span>
+            </div>
+
+        </div>
+
+        <div class="cart-footer">
+
+            <div class="cart-total">
+                <span>Total</span>
+                <strong id="cartTotal">₦0</strong>
+            </div>
+
+            <button class="primary-button checkout-button">
+                CHECKOUT
+                <span>→</span>
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- ================================
+         CART OVERLAY
+    ================================= -->
+
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+
+    <!-- ================================
+         FOOTER
+    ================================= -->
+
+    <footer class="site-footer">
+
+        <div class="footer-brand">
+
+            <div class="brand">
+                <span class="brand-mark">P</span>
+                <span>PHANTOM</span>
+            </div>
+
+            <p>
+                Discover products beyond ordinary.
+            </p>
+
+        </div>
+
+        <div class="footer-links">
+
+            <a href="#home">Home</a>
+            <a href="#shop">Shop</a>
+            <a href="#trending">Trending</a>
+            <a href="#deals">Deals</a>
+
+        </div>
+
+        <div class="footer-bottom">
+            © 2026 Phantom Store. All rights reserved.
+        </div>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="js/script.js"></script>
 
 </body>
 </html>

@@ -2628,3 +2628,152 @@ img {
         transition-duration: 0.01ms !important;
     }
 }
+
+/* =========================================================
+   DYNAMIC CART ITEMS
+   ========================================================= */
+
+.cart-item {
+    position: relative;
+    display: grid;
+    grid-template-columns: 70px 1fr 25px;
+    gap: 12px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.cart-item-image {
+    width: 70px;
+    height: 80px;
+
+    display: grid;
+    place-items: center;
+
+    padding: 5px;
+
+    color: rgba(255, 255, 255, 0.35);
+
+    font-size: 8px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+
+    text-align: center;
+}
+
+.cart-item-details > span {
+    color: var(--muted);
+
+    font-size: 7px;
+    letter-spacing: 0.15em;
+}
+
+.cart-item-details h4 {
+    margin: 5px 0;
+
+    padding-right: 15px;
+
+    font-size: 11px;
+    line-height: 1.4;
+}
+
+.cart-item-details strong {
+    color: var(--gold);
+
+    font-size: 11px;
+}
+
+.cart-quantity {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    margin-top: 9px;
+}
+
+.quantity-button {
+    width: 22px;
+    height: 22px;
+
+    display: grid;
+    place-items: center;
+
+    border: 1px solid var(--border);
+
+    background: transparent;
+
+    color: var(--white);
+
+    font-size: 13px;
+
+    cursor: pointer;
+}
+
+.quantity-button:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+}
+
+.cart-quantity span {
+    min-width: 12px;
+
+    text-align: center;
+
+    font-size: 10px;
+}
+
+.remove-cart-item {
+    width: 25px;
+    height: 25px;
+
+    background: transparent;
+
+    color: var(--muted);
+
+    font-size: 17px;
+
+    cursor: pointer;
+}
+
+.remove-cart-item:hover {
+    color: #ff6685;
+}
+
+.empty-cart {
+    padding: 40px 15px;
+
+    text-align: center;
+}
+
+.empty-cart div {
+    margin-bottom: 12px;
+
+    font-size: 35px;
+}
+
+.empty-cart p {
+    margin: 0 0 6px;
+
+    color: var(--white);
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.empty-cart span {
+    color: var(--muted);
+
+    font-size: 10px;
+}
+
+@media (max-width: 650px) {
+
+    .cart-item {
+        grid-template-columns: 60px 1fr 22px;
+    }
+
+    .cart-item-image {
+        width: 60px;
+        height: 70px;
+    }
+
+}

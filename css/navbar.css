@@ -1,0 +1,583 @@
+/* =========================================================
+   PHANTOM DROPSHIPPING
+   PHASE 2 — PREMIUM NAVIGATION
+   ========================================================= */
+
+/* ---------- NAVIGATION WRAPPER ---------- */
+
+.phantom-nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    width: 100%;
+
+    background: rgba(7, 20, 38, 0.88);
+    border-bottom: 1px solid rgba(214, 168, 79, 0.16);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    transition:
+        background 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.phantom-nav:hover {
+    background: rgba(7, 20, 38, 0.95);
+    border-bottom-color: rgba(214, 168, 79, 0.3);
+
+    box-shadow:
+        0 8px 35px rgba(0, 0, 0, 0.22);
+}
+
+
+/* ---------- NAV INNER ---------- */
+
+.phantom-nav-inner {
+    width: min(1400px, 92%);
+    min-height: 78px;
+
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+
+/* ---------- LOGO ---------- */
+
+.phantom-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+
+    text-decoration: none;
+
+    color: #ffffff;
+
+    flex-shrink: 0;
+}
+
+.phantom-brand-mark {
+    width: 42px;
+    height: 42px;
+
+    display: grid;
+    place-items: center;
+
+    border: 1px solid rgba(214, 168, 79, 0.55);
+    border-radius: 12px;
+
+    color: #d6a84f;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(214, 168, 79, 0.15),
+            rgba(7, 20, 38, 0.8)
+        );
+
+    box-shadow:
+        inset 0 0 18px rgba(214, 168, 79, 0.05);
+
+    font-weight: 800;
+    font-size: 18px;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.phantom-brand:hover .phantom-brand-mark {
+    transform: rotate(-6deg) scale(1.05);
+
+    border-color: #d6a84f;
+
+    box-shadow:
+        0 0 22px rgba(214, 168, 79, 0.18);
+}
+
+.phantom-brand-text {
+    display: flex;
+    flex-direction: column;
+
+    line-height: 1;
+}
+
+.phantom-brand-name {
+    font-size: 18px;
+    font-weight: 800;
+
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.phantom-brand-subtitle {
+    margin-top: 5px;
+
+    color: #8c9ab0;
+
+    font-size: 8px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+}
+
+
+/* ---------- DESKTOP LINKS ---------- */
+
+.phantom-nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    margin-left: auto;
+}
+
+.phantom-nav-link {
+    position: relative;
+
+    padding: 10px 14px;
+
+    color: #e9eef7;
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    letter-spacing: 0.04em;
+
+    border-radius: 8px;
+
+    transition:
+        color 0.25s ease,
+        background 0.25s ease;
+}
+
+.phantom-nav-link::after {
+    content: "";
+
+    position: absolute;
+
+    left: 14px;
+    right: 14px;
+    bottom: 4px;
+
+    height: 1px;
+
+    background: #d6a84f;
+
+    transform: scaleX(0);
+    transform-origin: center;
+
+    transition: transform 0.3s ease;
+}
+
+.phantom-nav-link:hover {
+    color: #f2d58b;
+
+    background: rgba(214, 168, 79, 0.06);
+}
+
+.phantom-nav-link:hover::after {
+    transform: scaleX(1);
+}
+
+
+/* ---------- NAV ACTIONS ---------- */
+
+.phantom-nav-actions {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    flex-shrink: 0;
+}
+
+
+/* ---------- SEARCH ---------- */
+
+.phantom-search-btn,
+.phantom-cart-btn {
+    position: relative;
+
+    width: 42px;
+    height: 42px;
+
+    display: grid;
+    place-items: center;
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+
+    background: rgba(255, 255, 255, 0.035);
+
+    color: #ffffff;
+
+    cursor: pointer;
+
+    transition:
+        color 0.25s ease,
+        border-color 0.25s ease,
+        background 0.25s ease,
+        transform 0.25s ease;
+}
+
+.phantom-search-btn:hover,
+.phantom-cart-btn:hover {
+    color: #f2d58b;
+
+    border-color: rgba(214, 168, 79, 0.45);
+
+    background: rgba(214, 168, 79, 0.08);
+
+    transform: translateY(-2px);
+}
+
+
+/* ---------- CART COUNT ---------- */
+
+.phantom-cart-count {
+    position: absolute;
+
+    top: -5px;
+    right: -5px;
+
+    min-width: 18px;
+    height: 18px;
+
+    padding: 0 5px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 50%;
+
+    background: #d6a84f;
+    color: #071426;
+
+    font-size: 9px;
+    font-weight: 800;
+
+    border: 2px solid #071426;
+}
+
+
+/* ---------- LOGIN ---------- */
+
+.phantom-login-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 42px;
+
+    padding: 0 17px;
+
+    border: 1px solid rgba(214, 168, 79, 0.45);
+    border-radius: 10px;
+
+    background: transparent;
+
+    color: #f2d58b;
+
+    text-decoration: none;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.phantom-login-btn:hover {
+    background: #d6a84f;
+    border-color: #d6a84f;
+
+    color: #071426;
+
+    transform: translateY(-2px);
+}
+
+
+/* ---------- HAMBURGER ---------- */
+
+.phantom-menu-btn {
+    display: none;
+
+    width: 44px;
+    height: 44px;
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 10px;
+
+    background: rgba(255, 255, 255, 0.035);
+
+    cursor: pointer;
+}
+
+.phantom-menu-lines {
+    width: 20px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+
+    margin: auto;
+}
+
+.phantom-menu-lines span {
+    display: block;
+
+    width: 100%;
+    height: 2px;
+
+    background: #f2d58b;
+
+    border-radius: 10px;
+
+    transition:
+        transform 0.3s ease,
+        opacity 0.3s ease;
+}
+
+
+/* ---------- MOBILE SIDE MENU ---------- */
+
+.phantom-mobile-menu {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    z-index: 2000;
+
+    width: min(330px, 86vw);
+    height: 100vh;
+
+    padding: 25px;
+
+    background: #071426;
+
+    border-right: 1px solid rgba(214, 168, 79, 0.22);
+
+    box-shadow:
+        18px 0 60px rgba(0, 0, 0, 0.45);
+
+    transform: translateX(-105%);
+
+    transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+
+    overflow-y: auto;
+}
+
+.phantom-mobile-menu.active {
+    transform: translateX(0);
+}
+
+
+/* ---------- MOBILE MENU HEADER ---------- */
+
+.phantom-mobile-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-bottom: 25px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.phantom-mobile-title {
+    color: #f2d58b;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+.phantom-mobile-close {
+    width: 38px;
+    height: 38px;
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 9px;
+
+    background: rgba(255, 255, 255, 0.04);
+
+    color: #ffffff;
+
+    cursor: pointer;
+
+    font-size: 18px;
+
+    transition:
+        color 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.phantom-mobile-close:hover {
+    color: #f2d58b;
+
+    border-color: rgba(214, 168, 79, 0.45);
+}
+
+
+/* ---------- MOBILE LINKS ---------- */
+
+.phantom-mobile-links {
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 25px;
+}
+
+.phantom-mobile-link {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    min-height: 55px;
+
+    padding: 0 5px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+
+    color: #e9eef7;
+
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition:
+        color 0.25s ease,
+        padding-left 0.25s ease;
+}
+
+.phantom-mobile-link:hover {
+    padding-left: 12px;
+
+    color: #f2d58b;
+}
+
+
+/* ---------- MOBILE OVERLAY ---------- */
+
+.phantom-menu-overlay {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 1500;
+
+    background: rgba(0, 0, 0, 0.6);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease;
+}
+
+.phantom-menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* ---------- RESPONSIVE ---------- */
+
+@media (max-width: 900px) {
+
+    .phantom-nav-links {
+        display: none;
+    }
+
+    .phantom-menu-btn {
+        display: grid;
+        place-items: center;
+    }
+
+    .phantom-nav-inner {
+        min-height: 70px;
+
+        gap: 12px;
+    }
+
+    .phantom-login-btn {
+        padding: 0 13px;
+    }
+}
+
+
+@media (max-width: 520px) {
+
+    .phantom-brand-subtitle {
+        display: none;
+    }
+
+    .phantom-brand-name {
+        font-size: 15px;
+    }
+
+    .phantom-brand-mark {
+        width: 38px;
+        height: 38px;
+    }
+
+    .phantom-search-btn {
+        display: none;
+    }
+
+    .phantom-login-btn {
+        min-height: 38px;
+
+        padding: 0 11px;
+
+        font-size: 10px;
+    }
+
+    .phantom-menu-btn {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+
+/* ---------- REDUCED MOTION ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .phantom-nav,
+    .phantom-brand-mark,
+    .phantom-nav-link,
+    .phantom-login-btn,
+    .phantom-search-btn,
+    .phantom-cart-btn,
+    .phantom-mobile-menu,
+    .phantom-menu-overlay,
+    .phantom-mobile-link {
+        transition: none !important;
+    }
+}

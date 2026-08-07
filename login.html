@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Phantom — Login</title>
+
+    <link
+        rel="stylesheet"
+        href="css/login.css"
+    >
+
+</head>
+
+
+<body>
+
+    <!-- =====================================================
+         LOGIN PAGE
+         ===================================================== -->
+
+    <main class="auth-page">
+
+        <section class="auth-container">
+
+
+            <!-- BRAND SIDE -->
+
+            <div class="auth-brand">
+
+                <div class="brand-mark">
+                    P
+                </div>
+
+                <h1>
+                    PHANTOM
+                </h1>
+
+                <p>
+                    DIFFERENT BY DESIGN.
+                </p>
+
+            </div>
+
+
+            <!-- AUTH PANEL -->
+
+            <div class="auth-panel">
+
+
+                <!-- LOGIN -->
+
+                <div
+                    class="auth-form login-form"
+                    id="loginForm"
+                >
+
+                    <span class="form-label">
+                        WELCOME BACK
+                    </span>
+
+                    <h2>
+                        Login
+                    </h2>
+
+                    <p class="form-description">
+                        Sign in to continue to Phantom.
+                    </p>
+
+
+                    <form id="loginFormElement">
+
+                        <div class="input-group">
+
+                            <label for="loginEmail">
+                                Email
+                            </label>
+
+                            <input
+                                type="email"
+                                id="loginEmail"
+                                placeholder="Enter your email"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label for="loginPassword">
+                                Password
+                            </label>
+
+                            <input
+                                type="password"
+                                id="loginPassword"
+                                placeholder="Enter your password"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-options">
+
+                            <label class="remember">
+
+                                <input
+                                    type="checkbox"
+                                >
+
+                                <span>
+                                    Remember me
+                                </span>
+
+                            </label>
+
+
+                            <button
+                                type="button"
+                                class="forgot-password"
+                            >
+                                Forgot password?
+                            </button>
+
+                        </div>
+
+
+                        <button
+                            type="submit"
+                            class="auth-button"
+                        >
+                            LOGIN
+                        </button>
+
+                    </form>
+
+
+                    <p class="switch-text">
+
+                        Don't have an account?
+
+                        <button
+                            type="button"
+                            id="showSignup"
+                            class="switch-button"
+                        >
+                            Create one
+                        </button>
+
+                    </p>
+
+                </div>
+
+
+                <!-- SIGN UP -->
+
+                <div
+                    class="auth-form signup-form"
+                    id="signupForm"
+                >
+
+                    <span class="form-label">
+                        JOIN PHANTOM
+                    </span>
+
+                    <h2>
+                        Sign Up
+                    </h2>
+
+                    <p class="form-description">
+                        Create your Phantom account.
+                    </p>
+
+
+                    <form id="signupFormElement">
+
+
+                        <div class="input-group">
+
+                            <label for="signupName">
+                                Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="signupName"
+                                placeholder="Your name"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label for="signupEmail">
+                                Email
+                            </label>
+
+                            <input
+                                type="email"
+                                id="signupEmail"
+                                placeholder="Your email"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label for="signupPassword">
+                                Password
+                            </label>
+
+                            <input
+                                type="password"
+                                id="signupPassword"
+                                placeholder="Create a password"
+                                minlength="6"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label for="signupConfirm">
+                                Confirm password
+                            </label>
+
+                            <input
+                                type="password"
+                                id="signupConfirm"
+                                placeholder="Confirm your password"
+                                minlength="6"
+                                required
+                            >
+
+                        </div>
+
+
+                        <button
+                            type="submit"
+                            class="auth-button"
+                        >
+                            CREATE ACCOUNT
+                        </button>
+
+                    </form>
+
+
+                    <p class="switch-text">
+
+                        Already have an account?
+
+                        <button
+                            type="button"
+                            id="showLogin"
+                            class="switch-button"
+                        >
+                            Login
+                        </button>
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script>
+
+        const authPage =
+            document.querySelector(".auth-page");
+
+        const showSignup =
+            document.getElementById("showSignup");
+
+        const showLogin =
+            document.getElementById("showLogin");
+
+
+        showSignup.addEventListener(
+            "click",
+            () => {
+
+                authPage.classList.add(
+                    "signup-active"
+                );
+
+            }
+        );
+
+
+        showLogin.addEventListener(
+            "click",
+            () => {
+
+                authPage.classList.remove(
+                    "signup-active"
+                );
+
+            }
+        );
+
+    </script>
+
+</body>
+
+</html>

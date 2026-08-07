@@ -316,3 +316,58 @@
 </body>
 
 </html>
+<script type="module">
+    import {
+        auth,
+        createUserWithEmailAndPassword,
+        signInWithEmailAndPassword
+    } from "./js/firebase.js";
+
+    const loginForm = document.getElementById("loginForm");
+    const signupForm = document.getElementById("signupForm");
+
+    // LOGIN
+    loginForm.addEventListener("submit", async function (event) {
+        event.preventDefault();
+
+        const email = document.getElementById("loginEmail").value.trim();
+        const password = document.getElementById("loginPassword").value;
+
+        try {
+            await signInWithEmailAndPassword(auth, email, password);
+
+            window.location.href = "./home.html";
+
+        } catch (error) {
+            console.error(error);
+
+            alert("Login failed: " + error.message);
+        }
+    });
+
+
+    // SIGN UP
+    signupForm.addEventListener("submit", async function (event) {
+        event.preventDefault();
+
+        const email = document.getElementById("signupEmail").value.trim();
+        const password = document.getElementById("signupPassword").value;
+
+        try {
+            await createUserWithEmailAndPassword(
+                auth,
+                email,
+                password
+            );
+
+            alert("Account created successfully!");
+
+            window.location.href = "./home.html";
+
+        } catch (error) {
+            console.error(error);
+
+            alert("Sign up failed: " + error.message);
+        }
+    });
+</script>

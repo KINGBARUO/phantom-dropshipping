@@ -1,0 +1,829 @@
+/* =========================================================
+   PHANTOM DROPSHIPPING
+   LOGIN / SIGN-UP — STEP 2
+   ========================================================= */
+
+:root {
+    --navy: #071426;
+    --navy-light: #0d2038;
+    --navy-card: #0a1b30;
+
+    --gold: #d6a84f;
+    --gold-light: #f2d58b;
+
+    --white: #ffffff;
+    --text: #e9eef7;
+    --muted: #8c9ab0;
+
+    --border: rgba(255, 255, 255, 0.10);
+
+    --danger: #ff6685;
+}
+
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+
+body {
+    min-height: 100vh;
+
+    background: var(--navy);
+
+    color: var(--text);
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    overflow-x: hidden;
+}
+
+
+button,
+input {
+    font: inherit;
+}
+
+
+button {
+    border: 0;
+}
+
+
+/* =========================================================
+   AUTH PAGE
+   ========================================================= */
+
+.auth-page {
+    position: relative;
+
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 40px 20px;
+
+    background:
+        radial-gradient(
+            circle at 15% 50%,
+            rgba(78, 140, 255, 0.10),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 85% 50%,
+            rgba(214, 168, 79, 0.08),
+            transparent 30%
+        ),
+        var(--navy);
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   DECORATIVE BACKGROUND
+   ========================================================= */
+
+.auth-page::before {
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    top: -250px;
+    right: -200px;
+
+    border: 1px solid rgba(214, 168, 79, 0.10);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+
+.auth-page::after {
+    content: "";
+
+    position: absolute;
+
+    width: 400px;
+    height: 400px;
+
+    bottom: -220px;
+    left: -180px;
+
+    border: 1px solid rgba(78, 140, 255, 0.10);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   MAIN CONTAINER
+   ========================================================= */
+
+.auth-container {
+    position: relative;
+
+    z-index: 2;
+
+    width: min(1050px, 100%);
+
+    min-height: 650px;
+
+    display: grid;
+
+    grid-template-columns:
+        0.85fr 1.15fr;
+
+    overflow: hidden;
+
+    background:
+        rgba(10, 27, 48, 0.88);
+
+    border:
+        1px solid rgba(214, 168, 79, 0.18);
+
+    box-shadow:
+        0 35px 100px rgba(0, 0, 0, 0.45);
+
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+
+
+/* =========================================================
+   BRAND PANEL
+   ========================================================= */
+
+.auth-brand {
+    position: relative;
+
+    min-height: 650px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 50px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(214, 168, 79, 0.09),
+            rgba(7, 20, 38, 0.4)
+        );
+
+    border-right:
+        1px solid rgba(255, 255, 255, 0.07);
+
+    overflow: hidden;
+}
+
+
+.auth-brand::before {
+    content: "";
+
+    position: absolute;
+
+    width: 330px;
+    height: 330px;
+
+    border:
+        1px solid rgba(214, 168, 79, 0.20);
+
+    border-radius: 50%;
+
+    animation:
+        brandOrbit 18s linear infinite;
+}
+
+
+.auth-brand::after {
+    content: "";
+
+    position: absolute;
+
+    width: 220px;
+    height: 220px;
+
+    border:
+        1px solid rgba(78, 140, 255, 0.16);
+
+    border-radius: 50%;
+
+    animation:
+        brandOrbitReverse 13s linear infinite;
+}
+
+
+@keyframes brandOrbit {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+@keyframes brandOrbitReverse {
+
+    from {
+        transform: rotate(360deg);
+    }
+
+    to {
+        transform: rotate(0deg);
+    }
+
+}
+
+
+/* =========================================================
+   BRAND MARK
+   ========================================================= */
+
+.brand-mark {
+    position: relative;
+
+    z-index: 2;
+
+    width: 82px;
+    height: 82px;
+
+    display: grid;
+    place-items: center;
+
+    margin-bottom: 28px;
+
+    border:
+        1px solid rgba(214, 168, 79, 0.65);
+
+    background:
+        rgba(214, 168, 79, 0.05);
+
+    color: var(--gold-light);
+
+    font-size: 35px;
+    font-weight: 900;
+
+    box-shadow:
+        0 0 40px rgba(214, 168, 79, 0.08);
+
+    animation:
+        markFloat 4s ease-in-out infinite;
+}
+
+
+@keyframes markFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+
+}
+
+
+.auth-brand h1 {
+    position: relative;
+
+    z-index: 2;
+
+    color: var(--white);
+
+    font-size:
+        clamp(38px, 5vw, 64px);
+
+    font-weight: 900;
+
+    letter-spacing: 0.12em;
+}
+
+
+.auth-brand p {
+    position: relative;
+
+    z-index: 2;
+
+    margin-top: 12px;
+
+    color: var(--gold);
+
+    font-size: 9px;
+    font-weight: 800;
+
+    letter-spacing: 0.32em;
+}
+
+
+/* =========================================================
+   AUTH PANEL
+   ========================================================= */
+
+.auth-panel {
+    position: relative;
+
+    min-height: 650px;
+
+    overflow: hidden;
+
+    background: var(--navy-card);
+}
+
+
+/* =========================================================
+   AUTH FORMS
+   ========================================================= */
+
+.auth-form {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+
+    padding:
+        55px clamp(30px, 7vw, 90px);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(13, 32, 56, 0.95),
+            rgba(7, 20, 38, 0.98)
+        );
+
+    transition:
+        transform 0.7s cubic-bezier(0.77, 0, 0.175, 1),
+        opacity 0.5s ease;
+}
+
+
+/* =========================================================
+   LOGIN DEFAULT STATE
+   ========================================================= */
+
+.login-form {
+    transform: translateX(0);
+
+    opacity: 1;
+
+    z-index: 2;
+}
+
+
+.signup-form {
+    transform: translateX(100%);
+
+    opacity: 0;
+
+    z-index: 1;
+}
+
+
+/* =========================================================
+   SIGN-UP ACTIVE STATE
+   ========================================================= */
+
+.auth-page.signup-active
+.login-form {
+    transform: translateX(100%);
+
+    opacity: 0;
+}
+
+
+.auth-page.signup-active
+.signup-form {
+    transform: translateX(0);
+
+    opacity: 1;
+
+    z-index: 3;
+}
+
+
+/* =========================================================
+   FORM TEXT
+   ========================================================= */
+
+.form-label {
+    margin-bottom: 12px;
+
+    color: var(--gold);
+
+    font-size: 9px;
+    font-weight: 900;
+
+    letter-spacing: 0.25em;
+}
+
+
+.auth-form h2 {
+    color: var(--white);
+
+    font-size:
+        clamp(34px, 5vw, 52px);
+
+    line-height: 1;
+
+    letter-spacing: -0.04em;
+}
+
+
+.form-description {
+    margin-top: 12px;
+    margin-bottom: 35px;
+
+    color: var(--muted);
+
+    font-size: 12px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   INPUT GROUP
+   ========================================================= */
+
+.input-group {
+    margin-bottom: 18px;
+}
+
+
+.input-group label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #c8d0dd;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 0.08em;
+}
+
+
+.input-group input {
+    width: 100%;
+
+    height: 50px;
+
+    padding:
+        0 15px;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.10);
+
+    outline: none;
+
+    background:
+        rgba(255, 255, 255, 0.035);
+
+    color: var(--white);
+
+    border-radius: 7px;
+
+    font-size: 12px;
+
+    transition:
+        border-color 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.input-group input::placeholder {
+    color: #65748b;
+}
+
+
+.input-group input:hover {
+    border-color:
+        rgba(214, 168, 79, 0.25);
+}
+
+
+.input-group input:focus {
+    border-color: var(--gold);
+
+    background:
+        rgba(214, 168, 79, 0.035);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(214, 168, 79, 0.06);
+}
+
+
+/* =========================================================
+   FORM OPTIONS
+   ========================================================= */
+
+.form-options {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin:
+        5px 0 25px;
+}
+
+
+.remember {
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+
+    color: var(--muted);
+
+    font-size: 10px;
+
+    cursor: pointer;
+}
+
+
+.remember input {
+    accent-color: var(--gold);
+}
+
+
+.forgot-password {
+    padding: 0;
+
+    background: transparent;
+
+    color: var(--gold);
+
+    font-size: 10px;
+
+    cursor: pointer;
+}
+
+
+.forgot-password:hover {
+    color: var(--gold-light);
+}
+
+
+/* =========================================================
+   AUTH BUTTON
+   ========================================================= */
+
+.auth-button {
+    width: 100%;
+    height: 52px;
+
+    background: var(--gold);
+
+    color: var(--navy);
+
+    border-radius: 7px;
+
+    font-size: 10px;
+    font-weight: 900;
+
+    letter-spacing: 0.18em;
+
+    cursor: pointer;
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.auth-button:hover {
+    background: var(--gold-light);
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 30px
+        rgba(214, 168, 79, 0.17);
+}
+
+
+.auth-button:active {
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   SWITCH LOGIN / SIGN UP
+   ========================================================= */
+
+.switch-text {
+    margin-top: 25px;
+
+    color: var(--muted);
+
+    text-align: center;
+
+    font-size: 10px;
+}
+
+
+.switch-button {
+    margin-left: 5px;
+
+    padding: 0;
+
+    background: transparent;
+
+    color: var(--gold);
+
+    font-weight: 800;
+
+    cursor: pointer;
+}
+
+
+.switch-button:hover {
+    color: var(--gold-light);
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+    .auth-page {
+        padding: 20px;
+    }
+
+
+    .auth-container {
+        display: block;
+
+        min-height: 680px;
+    }
+
+
+    .auth-brand {
+        min-height: 190px;
+
+        padding: 25px;
+
+        border-right: 0;
+
+        border-bottom:
+            1px solid rgba(255, 255, 255, 0.07);
+    }
+
+
+    .auth-brand::before {
+        width: 220px;
+        height: 220px;
+    }
+
+
+    .auth-brand::after {
+        width: 150px;
+        height: 150px;
+    }
+
+
+    .brand-mark {
+        width: 55px;
+        height: 55px;
+
+        margin-bottom: 12px;
+
+        font-size: 23px;
+    }
+
+
+    .auth-brand h1 {
+        font-size: 27px;
+    }
+
+
+    .auth-brand p {
+        font-size: 7px;
+    }
+
+
+    .auth-panel {
+        min-height: 490px;
+    }
+
+
+    .auth-form {
+        padding:
+            35px 25px;
+    }
+
+
+    .form-description {
+        margin-bottom: 25px;
+    }
+
+}
+
+
+@media (max-width: 450px) {
+
+    .auth-page {
+        padding: 0;
+    }
+
+
+    .auth-container {
+        width: 100%;
+        min-height: 100vh;
+
+        border: 0;
+    }
+
+
+    .auth-brand {
+        min-height: 170px;
+    }
+
+
+    .auth-panel {
+        min-height: calc(100vh - 170px);
+    }
+
+
+    .auth-form {
+        padding:
+            30px 20px;
+    }
+
+
+    .form-options {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+
+        transition-duration: 0.01ms !important;
+    }
+
+}

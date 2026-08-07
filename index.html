@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
 
     <meta
@@ -9,1186 +10,346 @@
         content="width=device-width, initial-scale=1.0"
     >
 
-    <meta
-        name="description"
-        content="Phantom Store — modern dropshipping marketplace."
-    >
+    <title>Phantom — Login</title>
 
-    <title>Phantom Store</title>
-
-    <!-- CSS -->
     <link
         rel="stylesheet"
-        href="css/style.css"
+        href="css/login.css"
     >
-    <link rel="stylesheet" href="css/navbar.css">
+
 </head>
 
 
 <body>
 
-    <!-- =====================================================
-         PAGE LOADER
-         ===================================================== -->
+    <main class="auth-page">
 
-    <div
-        class="page-loader"
-        id="pageLoader"
-    >
-        <div class="loader-logo">
-            PHANTOM
-        </div>
+        <section class="auth-container">
 
-        <div class="loader-line"></div>
-    </div>
 
+            <!-- BRAND -->
 
-    <!-- =====================================================
-         SIDEBAR OVERLAY
-         ===================================================== -->
+            <div class="auth-brand">
 
-    <div
-        class="sidebar-overlay"
-        id="sidebarOverlay"
-    ></div>
-
-
-    <!-- =====================================================
-         SIDEBAR
-         ===================================================== -->
-
-    <aside
-        class="sidebar"
-        id="sidebar"
-    >
-
-        <div class="sidebar-header">
-
-            <div class="sidebar-logo">
-                PHANTOM
-            </div>
-
-            <button
-                class="close-sidebar"
-                id="closeSidebar"
-                aria-label="Close menu"
-            >
-                ×
-            </button>
-
-        </div>
-
-
-        <!-- =====================================================
-     PHANTOM DROPSHIPPING
-     PHASE 2 — PREMIUM NAVIGATION
-     ===================================================== -->
-
-<header class="phantom-nav">
-
-    <div class="phantom-nav-inner">
-
-        <!-- BRAND -->
-        <a href="index.html" class="phantom-brand">
-
-            <span class="phantom-brand-mark">
-                P
-            </span>
-
-            <span class="phantom-brand-text">
-
-                <span class="phantom-brand-name">
-                    Phantom
-                </span>
-
-                <span class="phantom-brand-subtitle">
-                    Dropshipping
-                </span>
-
-            </span>
-
-        </a>
-
-
-        <!-- DESKTOP NAVIGATION -->
-        <nav class="phantom-nav-links">
-
-            <a href="index.html" class="phantom-nav-link">
-                Home
-            </a>
-
-            <a href="#shop" class="phantom-nav-link">
-                Shop
-            </a>
-
-            <a href="#categories" class="phantom-nav-link">
-                Categories
-            </a>
-
-            <a href="#deals" class="phantom-nav-link">
-                Deals
-            </a>
-
-        </nav>
-
-
-        <!-- ACTIONS -->
-        <div class="phantom-nav-actions">
-
-            <!-- SEARCH -->
-            <button
-                class="phantom-search-btn"
-                type="button"
-                aria-label="Search"
-            >
-                🔍
-            </button>
-
-
-            <!-- CART -->
-            <button
-                class="phantom-cart-btn"
-                type="button"
-                aria-label="Shopping cart"
-            >
-
-                🛒
-
-                <span class="phantom-cart-count">
-                    0
-                </span>
-
-            </button>
-
-
-            <!-- LOGIN -->
-            <a
-                href="login.html"
-                class="phantom-login-btn"
-            >
-                Login
-            </a>
-
-
-            <!-- MOBILE MENU BUTTON -->
-            <button
-                class="phantom-menu-btn"
-                id="phantom-menu-open"
-                type="button"
-                aria-label="Open menu"
-                aria-expanded="false"
-            >
-
-                <span class="phantom-menu-lines">
-
-                    <span></span>
-                    <span></span>
-                    <span></span>
-
-                </span>
-
-            </button>
-
-        </div>
-
-    </div>
-
-</header>
-
-
-<!-- =====================================================
-     MOBILE SIDE MENU
-     ===================================================== -->
-
-<div
-    class="phantom-menu-overlay"
-    id="phantom-menu-overlay"
-></div>
-
-
-<aside
-    class="phantom-mobile-menu"
-    id="phantom-mobile-menu"
-    aria-hidden="true"
->
-
-    <div class="phantom-mobile-header">
-
-        <span class="phantom-mobile-title">
-            Phantom Menu
-        </span>
-
-        <button
-            class="phantom-mobile-close"
-            id="phantom-menu-close"
-            type="button"
-            aria-label="Close menu"
-        >
-            ×
-        </button>
-
-    </div>
-
-
-    <nav class="phantom-mobile-links">
-
-        <a
-            href="index.html"
-            class="phantom-mobile-link"
-        >
-            Home
-        </a>
-
-        <a
-            href="#shop"
-            class="phantom-mobile-link"
-        >
-            Shop
-        </a>
-
-        <a
-            href="#categories"
-            class="phantom-mobile-link"
-        >
-            Categories
-        </a>
-
-        <a
-            href="#deals"
-            class="phantom-mobile-link"
-        >
-            Deals
-        </a>
-
-        <a
-            href="login.html"
-            class="phantom-mobile-link"
-        >
-            Login
-        </a>
-
-    </nav>
-
-</aside>
-
-        <div class="sidebar-footer">
-
-            <span>
-                PHANTOM STORE
-            </span>
-
-            <small>
-                CURATED. MODERN. DIFFERENT.
-            </small>
-
-        </div>
-
-    </aside>
-
-
-    <!-- =====================================================
-         HEADER
-         ===================================================== -->
-
-    <header class="site-header">
-
-        <div class="header-left">
-
-            <button
-                class="menu-button"
-                id="openSidebar"
-                aria-label="Open menu"
-            >
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-
-
-            <a
-                href="#home"
-                class="brand"
-            >
-                PHANTOM
-            </a>
-
-        </div>
-
-
-        <nav class="desktop-navigation">
-
-            <a
-                href="#home"
-                class="nav-link active"
-            >
-                Home
-            </a>
-
-            <a
-                href="#shop"
-                class="nav-link"
-            >
-                Shop
-            </a>
-
-            <a
-                href="#categories"
-                class="nav-link"
-            >
-                Categories
-            </a>
-
-            <a
-                href="#deals"
-                class="nav-link"
-            >
-                Deals
-            </a>
-
-        </nav>
-
-
-        <div class="header-actions">
-
-            <button
-                class="header-icon"
-                id="searchButton"
-                aria-label="Search"
-            >
-                ⌕
-            </button>
-
-            <button
-                class="header-icon"
-                id="wishlistButton"
-                aria-label="Wishlist"
-            >
-                ♡
-            </button>
-
-            <button
-                class="header-icon"
-                id="accountButton"
-                aria-label="Account"
-            >
-                ◯
-            </button>
-
-            <button
-                class="cart-button"
-                id="cartButton"
-                aria-label="Shopping cart"
-            >
-                🛒
-
-                <span
-                    class="cart-count"
-                    id="cartCount"
-                >
-                    0
-                </span>
-
-            </button>
-
-        </div>
-
-    </header>
-
-
-    <!-- =====================================================
-         MAIN
-         ===================================================== -->
-
-    <main>
-
-
-        <!-- =================================================
-             HERO
-             ================================================= -->
-
-        <section
-            class="hero"
-            id="home"
-        >
-
-            <div class="hero-content">
-
-                <span class="hero-label">
-                    THE NEW STANDARD
-                </span>
+                <div class="brand-mark">
+                    P
+                </div>
 
                 <h1>
-                    SHOP
-                    <span>UNIQUE.</span>
+                    PHANTOM
                 </h1>
 
                 <p>
-                    Discover products selected for people
-                    who don't want the ordinary.
+                    DIFFERENT BY DESIGN.
                 </p>
 
-
-                <div class="hero-buttons">
-
-                    <a
-                        href="#shop"
-                        class="primary-button"
-                    >
-                        EXPLORE STORE
-                    </a>
-
-                    <a
-                        href="#categories"
-                        class="secondary-button"
-                    >
-                        VIEW CATEGORIES
-                    </a>
-
-                </div>
-
             </div>
 
 
-            <div class="hero-visual">
+            <!-- AUTH PANEL -->
 
-                <div class="hero-orbit orbit-one"></div>
-
-                <div class="hero-orbit orbit-two"></div>
-
-                <div class="hero-product">
-
-                    <span>
-                        PHANTOM
-                    </span>
-
-                </div>
-
-            </div>
-
-        </section>
+            <div class="auth-panel">
 
 
-        <!-- =================================================
-             CATEGORIES
-             ================================================= -->
+                <!-- LOGIN -->
 
-        <section
-            class="categories-section"
-            id="categories"
-        >
+                <div class="auth-form login-form">
 
-            <div class="section-heading">
-
-                <div>
-
-                    <span class="section-label">
-                        EXPLORE
+                    <span class="form-label">
+                        WELCOME BACK
                     </span>
 
                     <h2>
-                        SHOP BY CATEGORY
+                        Login
                     </h2>
+
+                    <p class="form-description">
+                        Sign in to continue to Phantom.
+                    </p>
+
+
+                    <form id="loginForm">
+
+                        <div class="input-group">
+
+                            <label for="loginEmail">
+                                Email
+                            </label>
+
+                            <input
+                                type="email"
+                                id="loginEmail"
+                                placeholder="Enter your email"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label for="loginPassword">
+                                Password
+                            </label>
+
+                            <input
+                                type="password"
+                                id="loginPassword"
+                                placeholder="Enter your password"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-options">
+
+                            <label class="remember">
+
+                                <input
+                                    type="checkbox"
+                                >
+
+                                <span>
+                                    Remember me
+                                </span>
+
+                            </label>
+
+
+                            <button
+                                type="button"
+                                class="forgot-password"
+                            >
+                                Forgot password?
+                            </button>
+
+                        </div>
+
+
+                        <button
+                            type="submit"
+                            class="auth-button"
+                        >
+                            LOGIN
+                        </button>
+
+                    </form>
+
+
+                    <p class="switch-text">
+
+                        Don't have an account?
+
+                        <button
+                            type="button"
+                            id="showSignup"
+                            class="switch-button"
+                        >
+                            Create one
+                        </button>
+
+                    </p>
 
                 </div>
 
-                <p>
-                    Find something that fits your world.
-                </p>
 
-            </div>
+                <!-- SIGN UP -->
 
+                <div class="auth-form signup-form">
 
-            <div class="category-grid">
-
-
-                <article
-                    class="category-card"
-                    data-category="tech"
-                >
-
-                    <div class="category-number">
-                        01
-                    </div>
-
-                    <div class="category-icon">
-                        ◈
-                    </div>
-
-                    <h3>
-                        TECH
-                    </h3>
-
-                    <p>
-                        Smart gadgets and modern tech.
-                    </p>
-
-                    <span class="category-arrow">
-                        →
-                    </span>
-
-                </article>
-
-
-                <article
-                    class="category-card"
-                    data-category="fashion"
-                >
-
-                    <div class="category-number">
-                        02
-                    </div>
-
-                    <div class="category-icon">
-                        ◇
-                    </div>
-
-                    <h3>
-                        FASHION
-                    </h3>
-
-                    <p>
-                        Pieces built around your style.
-                    </p>
-
-                    <span class="category-arrow">
-                        →
-                    </span>
-
-                </article>
-
-
-                <article
-                    class="category-card"
-                    data-category="audio"
-                >
-
-                    <div class="category-number">
-                        03
-                    </div>
-
-                    <div class="category-icon">
-                        ◎
-                    </div>
-
-                    <h3>
-                        AUDIO
-                    </h3>
-
-                    <p>
-                        Sound designed for your world.
-                    </p>
-
-                    <span class="category-arrow">
-                        →
-                    </span>
-
-                </article>
-
-
-                <article
-                    class="category-card"
-                    data-category="accessories"
-                >
-
-                    <div class="category-number">
-                        04
-                    </div>
-
-                    <div class="category-icon">
-                        ✦
-                    </div>
-
-                    <h3>
-                        ACCESSORIES
-                    </h3>
-
-                    <p>
-                        The details that complete the look.
-                    </p>
-
-                    <span class="category-arrow">
-                        →
-                    </span>
-
-                </article>
-
-            </div>
-
-        </section>
-
-
-        <!-- =================================================
-             SHOP
-             ================================================= -->
-
-        <section
-            class="shop-section"
-            id="shop"
-        >
-
-            <div class="section-heading">
-
-                <div>
-
-                    <span class="section-label">
-                        PHANTOM SELECT
+                    <span class="form-label">
+                        JOIN PHANTOM
                     </span>
 
                     <h2>
-                        FEATURED PRODUCTS
+                        Sign Up
                     </h2>
+
+                    <p class="form-description">
+                        Create your Phantom account.
+                    </p>
+
+
+                    <form id="signupForm">
+
+                        <div class="input-group">
+
+                            <label for="signupName">
+                                Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="signupName"
+                                placeholder="Your name"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label for="signupEmail">
+                                Email
+                            </label>
+
+                            <input
+                                type="email"
+                                id="signupEmail"
+                                placeholder="Your email"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label for="signupPassword">
+                                Password
+                            </label>
+
+                            <input
+                                type="password"
+                                id="signupPassword"
+                                placeholder="Create a password"
+                                minlength="6"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="input-group">
+
+                            <label for="signupConfirm">
+                                Confirm password
+                            </label>
+
+                            <input
+                                type="password"
+                                id="signupConfirm"
+                                placeholder="Confirm your password"
+                                minlength="6"
+                                required
+                            >
+
+                        </div>
+
+
+                        <button
+                            type="submit"
+                            class="auth-button"
+                        >
+                            CREATE ACCOUNT
+                        </button>
+
+                    </form>
+
+
+                    <p class="switch-text">
+
+                        Already have an account?
+
+                        <button
+                            type="button"
+                            id="showLogin"
+                            class="switch-button"
+                        >
+                            Login
+                        </button>
+
+                    </p>
 
                 </div>
 
-                <p>
-                    Carefully selected. Ready to discover.
-                </p>
-
             </div>
-
-
-            <div class="product-grid">
-
-
-                <!-- PRODUCT 1 -->
-
-                <article
-                    class="product-card"
-                    data-product="headphones"
-                >
-
-                    <div class="product-image">
-
-                        <span class="product-tag">
-                            NEW
-                        </span>
-
-                        <button
-                            class="heart-button"
-                            aria-label="Add to wishlist"
-                        >
-                            ♡
-                        </button>
-
-                        <div class="product-image-content">
-                            AUDIO
-                        </div>
-
-                    </div>
-
-
-                    <div class="product-info">
-
-                        <span class="product-category">
-                            AUDIO
-                        </span>
-
-                        <h3>
-                            Phantom Wireless Pro
-                        </h3>
-
-                        <div class="product-bottom">
-
-                            <strong>
-                                ₦45,000
-                            </strong>
-
-                            <button
-                                class="add-button"
-                            >
-                                +
-                            </button>
-
-                        </div>
-
-                    </div>
-
-                </article>
-
-
-                <!-- PRODUCT 2 -->
-
-                <article
-                    class="product-card"
-                    data-product="watch"
-                >
-
-                    <div class="product-image">
-
-                        <span class="product-tag">
-                            TRENDING
-                        </span>
-
-                        <button
-                            class="heart-button"
-                            aria-label="Add to wishlist"
-                        >
-                            ♡
-                        </button>
-
-                        <div class="product-image-content">
-                            WATCH
-                        </div>
-
-                    </div>
-
-
-                    <div class="product-info">
-
-                        <span class="product-category">
-                            ACCESSORIES
-                        </span>
-
-                        <h3>
-                            Aurex Smart Watch
-                        </h3>
-
-                        <div class="product-bottom">
-
-                            <strong>
-                                ₦68,500
-                            </strong>
-
-                            <button
-                                class="add-button"
-                            >
-                                +
-                            </button>
-
-                        </div>
-
-                    </div>
-
-                </article>
-
-
-                <!-- PRODUCT 3 -->
-
-                <article
-                    class="product-card"
-                    data-product="speaker"
-                >
-
-                    <div class="product-image">
-
-                        <span class="product-tag">
-                            HOT
-                        </span>
-
-                        <button
-                            class="heart-button"
-                            aria-label="Add to wishlist"
-                        >
-                            ♡
-                        </button>
-
-                        <div class="product-image-content">
-                            SPEAKER
-                        </div>
-
-                    </div>
-
-
-                    <div class="product-info">
-
-                        <span class="product-category">
-                            TECH
-                        </span>
-
-                        <h3>
-                            Echo Mini Speaker
-                        </h3>
-
-                        <div class="product-bottom">
-
-                            <strong>
-                                ₦32,000
-                            </strong>
-
-                            <button
-                                class="add-button"
-                            >
-                                +
-                            </button>
-
-                        </div>
-
-                    </div>
-
-                </article>
-
-
-                <!-- PRODUCT 4 -->
-
-                <article
-                    class="product-card"
-                    data-product="sneakers"
-                >
-
-                    <div class="product-image">
-
-                        <span class="product-tag">
-                            EDIT
-                        </span>
-
-                        <button
-                            class="heart-button"
-                            aria-label="Add to wishlist"
-                        >
-                            ♡
-                        </button>
-
-                        <div class="product-image-content">
-                            FASHION
-                        </div>
-
-                    </div>
-
-
-                    <div class="product-info">
-
-                        <span class="product-category">
-                            FASHION
-                        </span>
-
-                        <h3>
-                            Phantom Street Runner
-                        </h3>
-
-                        <div class="product-bottom">
-
-                            <strong>
-                                ₦57,000
-                            </strong>
-
-                            <button
-                                class="add-button"
-                            >
-                                +
-                            </button>
-
-                        </div>
-
-                    </div>
-
-                </article>
-
-            </div>
-
-        </section>
-
-
-        <!-- =================================================
-             DEALS
-             ================================================= -->
-
-        <section
-            class="deal-section"
-            id="deals"
-        >
-
-            <div class="deal-content">
-
-                <span class="section-label">
-                    LIMITED DROP
-                </span>
-
-                <h2>
-                    SOMETHING
-                    <span>NEW</span>
-                    IS COMING.
-                </h2>
-
-                <p>
-                    Follow the store for upcoming products,
-                    exclusive deals and limited drops.
-                </p>
-
-                <button
-                    class="primary-button"
-                    id="dealButton"
-                >
-                    DISCOVER MORE
-                </button>
-
-            </div>
-
-
-            <div class="deal-decoration">
-
-                <div class="helix helix-one"></div>
-
-                <div class="helix helix-two"></div>
-
-                <div class="helix helix-three"></div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =================================================
-             ABOUT
-             ================================================= -->
-
-        <section
-            class="about-section"
-            id="about"
-        >
-
-            <div>
-
-                <span class="section-label">
-                    ABOUT PHANTOM
-                </span>
-
-                <h2>
-                    NOT JUST
-                    ANOTHER STORE.
-                </h2>
-
-            </div>
-
-
-            <p>
-                Phantom Store is a modern dropshipping concept
-                focused on discovering products that feel
-                different, useful and worth having.
-            </p>
-
-        </section>
-
-
-        <!-- =================================================
-             CONTACT
-             ================================================= -->
-
-        <section
-            class="contact-section"
-            id="contact"
-        >
-
-            <span class="section-label">
-                CONTACT
-            </span>
-
-            <h2>
-                HAVE A QUESTION?
-            </h2>
-
-            <p>
-                Email:
-                <a href="mailto:apelebirie@gmail.com">
-                    apelebirie@gmail.com
-                </a>
-            </p>
-
-            <p>
-                Phone:
-                <a href="tel:08138921874">
-                    08138921874
-                </a>
-            </p>
 
         </section>
 
     </main>
 
 
-    <!-- =====================================================
-         PRODUCT MODAL
-         ===================================================== -->
+    <script>
 
-    <div
-        class="product-modal"
-        id="productModal"
-    >
-
-        <div
-            class="modal-backdrop"
-            id="modalBackdrop"
-        ></div>
+        const authPage =
+            document.querySelector(".auth-page");
 
 
-        <div class="modal-content">
-
-            <button
-                class="modal-close"
-                id="modalClose"
-                aria-label="Close product"
-            >
-                ×
-            </button>
+        const showSignup =
+            document.getElementById("showSignup");
 
 
-            <div
-                class="modal-product-image"
-                id="modalProductImage"
-            >
-                PRODUCT
-            </div>
+        const showLogin =
+            document.getElementById("showLogin");
 
 
-            <div class="modal-product-info">
+        showSignup.addEventListener(
+            "click",
+            function () {
 
-                <span
-                    class="product-category"
-                    id="modalCategory"
-                >
-                    CATEGORY
-                </span>
+                authPage.classList.add(
+                    "signup-active"
+                );
 
-                <h2 id="modalTitle">
-                    Product
-                </h2>
-
-                <p id="modalDescription">
-                    Product description.
-                </p>
-
-                <strong
-                    class="modal-price"
-                    id="modalPrice"
-                >
-                    ₦0
-                </strong>
+            }
+        );
 
 
-                <button
-                    class="primary-button modal-add-cart"
-                    id="modalAddCart"
-                >
-                    ADD TO CART
-                </button>
+        showLogin.addEventListener(
+            "click",
+            function () {
 
-            </div>
+                authPage.classList.remove(
+                    "signup-active"
+                );
 
-        </div>
-
-    </div>
+            }
+        );
 
 
-    <!-- =====================================================
-         CART OVERLAY
-         ===================================================== -->
+        /*
+         * TEMPORARY TEST
+         *
+         * For now, clicking LOGIN sends
+         * the user to the actual website.
+         *
+         * Firebase authentication will
+         * replace this later.
+         */
 
-    <div
-        class="cart-overlay"
-        id="cartOverlay"
-    ></div>
+        document
+            .getElementById("loginForm")
+            .addEventListener(
+                "submit",
+                function (event) {
 
+                    event.preventDefault();
 
-    <!-- =====================================================
-         MINI CART
-         ===================================================== -->
+                    window.location.href =
+                        "home.html";
 
-    <aside
-        class="mini-cart"
-        id="miniCart"
-    >
-
-        <div class="cart-header">
-
-            <div>
-
-                <span class="section-label">
-                    YOUR BAG
-                </span>
-
-                <h2>
-                    SHOPPING CART
-                </h2>
-
-            </div>
+                }
+            );
 
 
-            <button
-                class="close-cart"
-                id="closeCart"
-                aria-label="Close cart"
-            >
-                ×
-            </button>
+        document
+            .getElementById("signupForm")
+            .addEventListener(
+                "submit",
+                function (event) {
 
-        </div>
+                    event.preventDefault();
 
+                    window.location.href =
+                        "home.html";
 
-        <div
-            class="cart-items"
-            id="cartItems"
-        >
+                }
+            );
 
-            <div class="empty-cart">
-
-                <div>
-                    🛒
-                </div>
-
-                <p>
-                    Your cart is empty.
-                </p>
-
-                <span>
-                    Add something you love.
-                </span>
-
-            </div>
-
-        </div>
-
-
-        <div class="cart-footer">
-
-            <div class="cart-total-row">
-
-                <span>
-                    TOTAL
-                </span>
-
-                <strong id="cartTotal">
-                    ₦0
-                </strong>
-
-            </div>
-
-
-            <button
-                class="primary-button checkout-button"
-                id="checkoutButton"
-            >
-                CHECKOUT
-            </button>
-
-        </div>
-
-    </aside>
-
-
-    <!-- =====================================================
-         FOOTER
-         ===================================================== -->
-
-    <footer class="site-footer">
-
-        <div class="footer-brand">
-            PHANTOM
-        </div>
-
-        <p>
-            © 2026 Phantom Store.
-            All rights reserved.
-        </p>
-
-    </footer>
-
-
-    <!-- =====================================================
-         JAVASCRIPT
-         ===================================================== -->
-
-    <script
-        src="js/script.js"
-    ></script>
+    </script>
 
 </body>
 

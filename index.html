@@ -68,7 +68,7 @@
                     </p>
 
 
-                    <form id="loginForm">
+                    <form id="loginForm" action="./home.html" method="get">
 
                         <div class="input-group">
 
@@ -171,7 +171,7 @@
                     </p>
 
 
-                    <form id="signupForm">
+                    <form id="signupForm" action="./home.html" method=">
 
                         <div class="input-group">
 
@@ -305,30 +305,11 @@
        TEMPORARY LOGIN TEST
        ================================ */
 
-    loginForm.addEventListener("submit", function (event) {
-
-        event.preventDefault();
-
-        console.log("Login button clicked");
-
-        window.location.assign("./home.html");
-
-    });
-
-
+    
     /* ================================
        TEMPORARY SIGN UP TEST
        ================================ */
 
-    signupForm.addEventListener("submit", function (event) {
-
-        event.preventDefault();
-
-        console.log("Sign up button clicked");
-
-        window.location.assign("./home.html");
-
-    });
 
 </script>
     
